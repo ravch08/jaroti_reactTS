@@ -1,12 +1,14 @@
-import { Stack } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
+import { Stack } from "@mui/material";
 import { v4 as uuidv4 } from "uuid";
 import { productItems } from "../utils/data";
 import { ProductItem } from "../utils/helper";
 
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, addToWishlist, deleteFromWishlist } from "../../app/reducers/wishCartSlice";
+import { ProductProps } from "../../types/types";
 
 const Products = () => {
 	const dispatch = useDispatch();
@@ -70,7 +72,7 @@ const Products = () => {
 					gap={{ xs: "4rem", md: "2rem" }}
 					direction={{ xs: "column", md: "row" }}
 				>
-					{(category === "All" ? items : filteredProductItems)?.map((item) => {
+					{(category === "All" ? items : filteredProductItems)?.map((item: ProductProps) => {
 						return (
 							<ProductItem
 								key={item.id}

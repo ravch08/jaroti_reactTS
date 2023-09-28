@@ -1,5 +1,15 @@
 import React from "react";
-import { Banner, Categories, Clients, CompanyFeatures, FeaturedProducts, FooterBanner, Newsletter, Products, StoreBanner } from "../utils/helper";
+import {
+	Banner,
+	Categories,
+	Clients,
+	CompanyFeatures,
+	FeaturedProducts,
+	FooterBanner,
+	Newsletter,
+	Products,
+	StoreBanner,
+} from "../utils/helper";
 
 const Home = () => {
 	return (

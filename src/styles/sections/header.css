@@ -46,6 +46,7 @@ header {
 	.search {
 		gap: 0.6rem;
 		display: flex;
+		cursor: pointer;
 		align-items: center;
 
 		span {
@@ -120,10 +121,11 @@ header {
 }
 
 .login {
+	cursor: pointer;
 	position: relative;
 
 	.login-dropdown {
-		top: 110%;
+		top: 80%;
 		right: 0;
 		opacity: 0;
 		z-index: 99;
@@ -134,7 +136,7 @@ header {
 		background-color: white;
 		transform: translateY(5rem);
 		box-shadow: var(--box-shadow-md);
-		transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, transform 0.5s ease-in-out;
+		transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, top 0.5s ease-in-out;
 
 		&.show {
 			opacity: 1;
@@ -143,11 +145,11 @@ header {
 		}
 	}
 
-	/* &:hover .login-dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  } */
+	&:hover .login-dropdown {
+		top: 45%;
+		opacity: 1;
+		visibility: visible;
+	}
 
 	.form-control {
 		margin-bottom: 2rem;
@@ -234,6 +236,8 @@ header {
 	}
 
 	.sidebar-body {
+		width: 100%;
+
 		.cart-info {
 			padding: 5rem 2.5rem 4rem;
 			position: relative;

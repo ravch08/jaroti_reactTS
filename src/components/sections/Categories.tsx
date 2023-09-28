@@ -1,9 +1,32 @@
-import { Stack, Typography } from "@mui/material";
+import { Skeleton, Stack, Typography } from "@mui/material";
+import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 
-import { categoryItems } from "../utils/data";
+import { getCategory } from "../../services/apiCategory";
 
 const Categories = () => {
+	const { data, isLoading } = useQuery({
+		queryKey: ["categoryItems"],
+		queryFn: getCategory,
+	});
+
+	const categoryItemsList = data?.map((item) => {
+		return (
+			<Link key={item.id} to={`/categories/${item.id}`} className="category-item">
+				<figure>
+					<img src={item.imgSrc} loading="lazy" alt={item.title} />
+				</figure>
+				<Typography
+					variant="h5"
+					component={"h3"}
+					sx={{ color: "black", textTransform: "uppercase" }}
+				>
+					{item.title}
+				</Typography>
+			</Link>
+		);
+	});
+
 	return (
 		<section className="categories" aria-labelledby="Product Categories">
 			<div className="container">
@@ -15,22 +38,15 @@ const Categories = () => {
 				<Stack
 					flexWrap={"wrap"}
 					alignItems={"center"}
+					justifyContent={"space-evenly"}
 					gap={{ xs: "4rem", md: "2rem" }}
-					justifyContent={"space-between"}
 					direction={{ xs: "column", sm: "row" }}
 				>
-					{categoryItems?.map((item) => {
-						return (
-							<Link key={item.id} to={`/categories/${item.id}`} className="category-item">
-								<figure>
-									<img src={item.imgSrc} loading="lazy" alt={item.title} />
-								</figure>
-								<Typography variant="h5" component={"h3"} sx={{ color: "black", textTransform: "uppercase" }}>
-									{item.title}
-								</Typography>
-							</Link>
-						);
-					})}
+					{isLoading ? (
+						<Skeleton variant={"rounded"} animation="wave" height={250} />
+					) : (
+						categoryItemsList
+					)}
 				</Stack>
 			</div>
 		</section>

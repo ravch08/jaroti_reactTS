@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-const Wishlist = () => {
+const WishlistButton = () => {
 	const { wishlist } = useSelector((state) => state.wishCartState);
 
 	return (
@@ -20,4 +20,4 @@ const Wishlist = () => {
 	);
 };
 
-export default Wishlist;
+export default WishlistButton;

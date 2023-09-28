@@ -1,48 +1,15 @@
 // prettier-ignore
 import {
-	category1, category2, category3, category4, category5, category6,
-	product1, product10, product11, product12, product13, product14, product15, product16, product17, product18, product19, product2, product20, product21, product22, product23, product24, product25,
-	product3, product4, product5, product6, product7, product8, product9, slider1,
-	slider1_1024, slider1_1200, slider1_768, slider2, slider2_1024, slider2_1200,
-	slider2_768, slider3, slider3_1024, slider3_1200, slider3_768, team1, team2, team3, team4, team5
+  category1, category2, category3, category4, category5, category6,
+  product1, product10, product11, product12, product13, product14, product15, product16, product17, product18, product19, product2, product20, product21, product22, product23, product24, product25,
+  product3, product4, product5, product6, product7, product8, product9, slider1,
+  slider1_1024, slider1_1200, slider1_768, slider2, slider2_1024, slider2_1200,
+  slider2_768, slider3, slider3_1024, slider3_1200, slider3_768, team1, team2, team3, team4, team5
 } from '../utils/helper';
-
-export const bannerItems = [
-	{
-		id: "b1",
-		imgSrc: slider1,
-		imgSrc768: slider1_768,
-		imgSrc1024: slider1_1024,
-		imgSrc1200: slider1_1200,
-		title: "Gold Necklace Set",
-		superHeading: "Upto 10% off - Limited offer only",
-		description: "Quisque pretium mollis ex, vel interdum augue faucibus sit ame proin tempor purus ac suscipit sagittis.",
-	},
-	{
-		id: "b2",
-		imgSrc: slider2,
-		imgSrc768: slider2_768,
-		imgSrc1024: slider2_1024,
-		imgSrc1200: slider2_1200,
-		title: "Mix & Match Earring Set",
-		superHeading: "Now Only $7 - Limited offer only",
-		description: "Quisque pretium mollis ex, vel interdum augue faucibus sit ame proin tempor purus ac suscipit sagittis.",
-	},
-	{
-		id: "b3",
-		imgSrc: slider3,
-		imgSrc768: slider3_768,
-		imgSrc1024: slider3_1024,
-		imgSrc1200: slider3_1200,
-		title: "Diamond Wedding Ring Set",
-		superHeading: "20% off Engagement Rings",
-		description: "Quisque pretium mollis ex, vel interdum augue faucibus sit ame proin tempor purus ac suscipit sagittis.",
-	},
-];
 
 export const companyFeatureItems = [
 	{
-		id: "cf1",
+		id: 1,
 		title: "Exclusive Products",
 		svg: (
 			<svg xmlns="http://www.w3.org/2000/svg" width="44" viewBox="0 0 128 128">
@@ -51,7 +18,7 @@ export const companyFeatureItems = [
 		),
 	},
 	{
-		id: "cf2",
+		id: 2,
 		title: "Premium Packaging​",
 		svg: (
 			<svg xmlns="http://www.w3.org/2000/svg" width="44" viewBox="0 0 128 128">
@@ -64,7 +31,7 @@ export const companyFeatureItems = [
 		),
 	},
 	{
-		id: "cf3",
+		id: 3,
 		title: "Check Package on Delivery​",
 		svg: (
 			<svg xmlns="http://www.w3.org/2000/svg" width="44" viewBox="0 0 128 128">
@@ -77,7 +44,7 @@ export const companyFeatureItems = [
 		),
 	},
 	{
-		id: "cf4",
+		id: 4,
 		title: "30 days Money Back",
 		svg: (
 			<svg xmlns="http://www.w3.org/2000/svg" width="44" viewBox="0 0 128 128">
@@ -90,7 +57,7 @@ export const companyFeatureItems = [
 		),
 	},
 	{
-		id: "cf5",
+		id: 5,
 		title: "Free Shipping",
 		svg: (
 			<svg xmlns="http://www.w3.org/2000/svg" width="44" viewBox="0 0 128 128">
@@ -101,6 +68,42 @@ export const companyFeatureItems = [
 				></path>
 			</svg>
 		),
+	},
+];
+
+export const bannerItems = [
+	{
+		id: "b1",
+		imgSrc: slider1,
+		imgSrc768: slider1_768,
+		imgSrc1024: slider1_1024,
+		imgSrc1200: slider1_1200,
+		title: "Gold Necklace Set",
+		superHeading: "Upto 10% off - Limited offer only",
+		description:
+			"Quisque pretium mollis ex, vel interdum augue faucibus sit ame proin tempor purus ac suscipit sagittis.",
+	},
+	{
+		id: "b2",
+		imgSrc: slider2,
+		imgSrc768: slider2_768,
+		imgSrc1024: slider2_1024,
+		imgSrc1200: slider2_1200,
+		title: "Mix & Match Earring Set",
+		superHeading: "Now Only $7 - Limited offer only",
+		description:
+			"Quisque pretium mollis ex, vel interdum augue faucibus sit ame proin tempor purus ac suscipit sagittis.",
+	},
+	{
+		id: "b3",
+		imgSrc: slider3,
+		imgSrc768: slider3_768,
+		imgSrc1024: slider3_1024,
+		imgSrc1200: slider3_1200,
+		title: "Diamond Wedding Ring Set",
+		superHeading: "20% off Engagement Rings",
+		description:
+			"Quisque pretium mollis ex, vel interdum augue faucibus sit ame proin tempor purus ac suscipit sagittis.",
 	},
 ];
 

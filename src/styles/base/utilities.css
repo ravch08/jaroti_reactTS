@@ -43,6 +43,10 @@ section {
 	display: none;
 }
 
+.active {
+	font-weight: 600;
+}
+
 .social-icons {
 	svg {
 		fill: var(--color-light-100);

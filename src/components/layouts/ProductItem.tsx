@@ -1,21 +1,22 @@
-import { Stack, Typography } from "@mui/material";
 import { useState } from "react";
+
+import { Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
-import PropTypes from "prop-types";
+import { ProductProps } from "../../types/types";
 
-const ProductItem = (props) => {
+const ProductItem = (props: ProductProps) => {
 	const [toWishlist, setToWishlist] = useState(false);
 
-	const addWishlistHandler = () => {
-		props.addToWishlist();
-		setToWishlist(true);
-	};
+	// const addWishlistHandler = () => {
+	// 	props.addToWishlist();
+	// 	setToWishlist(true);
+	// };
 
-	const removeWishlistHandler = () => {
-		props.deleteFromWishlist();
-		setToWishlist(false);
-	};
+	// const removeWishlistHandler = () => {
+	// 	props.deleteFromWishlist();
+	// 	setToWishlist(false);
+	// };
 
 	const badgeClass = !props.badge ? "d-none" : "badge";
 	const discountClass = !props.discount ? "d-none" : "discount";
@@ -32,7 +33,7 @@ const ProductItem = (props) => {
 				<Link
 					to="#!"
 					className="btn btn-light"
-					onClick={props.addToCart ? () => props.addToCart() : false}
+					onClick={() => (props.addToCart ? props.addToCart() : false)}
 				>
 					ADD TO CART
 				</Link>
@@ -40,9 +41,9 @@ const ProductItem = (props) => {
 				<div className="user-cart">
 					<button
 						className={toWishlist ? "close" : "wishlist"}
-						onClick={() => {
-							props.addToWishlist() === false ? removeWishlistHandler() : addWishlistHandler();
-						}}
+						// onClick={() => {
+						// 	props.addToWishlist() ? removeWishlistHandler() : addWishlistHandler();
+						// }}
 					>
 						{!toWishlist ? (
 							<svg width="21" height="14" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
@@ -101,18 +102,6 @@ const ProductItem = (props) => {
 			</div>
 		</div>
 	);
-};
-
-ProductItem.propTypes = {
-	imgSrc: PropTypes.string.isRequired,
-	title: PropTypes.string.isRequired,
-	badge: PropTypes.string.isRequired,
-	price: PropTypes.number.isRequired,
-	addToCart: PropTypes.any.isRequired,
-	addToWishlist: PropTypes.any.isRequired,
-	deleteFromWishlist: PropTypes.any.isRequired,
-	discount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-	priceCrossed: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
 export default ProductItem;

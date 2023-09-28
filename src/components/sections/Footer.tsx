@@ -20,8 +20,8 @@ const Footer = () => {
 							<img src={logoLight} loading="lazy" width={"100"} />
 						</Link>
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque blanditiis autem eveniet vel fugit nostrum tempora doloribus
-							corrupti accusantium quas.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque blanditiis autem
+							eveniet vel fugit nostrum tempora doloribus corrupti accusantium quas.
 						</p>
 
 						<SocialIcons />

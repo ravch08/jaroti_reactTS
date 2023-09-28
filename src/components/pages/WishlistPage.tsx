@@ -1,7 +1,10 @@
-import { Stack } from "@mui/material";
 import React from "react";
+
+import { Stack } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, deleteFromWishlist } from "../../app/reducers/wishCartSlice";
+
+import { ProductProps } from "../../types/types";
 import { PageBanner, ProductItem, bannerProducts } from "../utils/helper";
 
 const WishlistPage = () => {
@@ -29,10 +32,10 @@ const WishlistPage = () => {
 						gap={"2rem"}
 						flexWrap={"wrap"}
 						direction={"row"}
-						justifyContent={"center"}
 						alignItems={"center"}
+						justifyContent={"center"}
 					>
-						{wishlist?.map((item) => {
+						{wishlist?.map((item: ProductProps) => {
 							return (
 								<ProductItem
 									key={item.id}

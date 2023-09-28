@@ -69,16 +69,17 @@ export { default as footerBannerParallax } from "../../assets/footer-banner-para
 export { default as payments } from "../../assets/payments.png";
 export { default as storeBanner } from "../../assets/store-banner.jpg";
 
-export { default as AboutInfo } from "../layouts/AboutInfo";
-export { default as Cart } from "../layouts/Cart";
-export { default as Login } from "../layouts/Login";
+export { default as CartButton } from "../layouts/CartButton";
+export { default as LoginButton } from "../layouts/LoginButton";
+export { default as Navbar } from "../layouts/Navbar";
 export { default as ProductItem } from "../layouts/ProductItem";
-export { default as RedBGQuote } from "../layouts/RedBGQuote";
 export { default as ScrollTop } from "../layouts/ScrollTop";
-export { default as Search } from "../layouts/Search";
+export { default as SearchButton } from "../layouts/SearchButton";
+export { default as SidebarBody } from "../layouts/SidebarBody";
+export { default as SidebarFooter } from "../layouts/SidebarFooter";
+export { default as SidebarHeader } from "../layouts/SidebarHeader";
 export { default as SocialIcons } from "../layouts/SocialIcons";
-export { default as Team } from "../layouts/Team";
-export { default as Wishlist } from "../layouts/Wishlist";
+export { default as WishlistButton } from "../layouts/WishlistButton";
 
 export { default as AboutUs } from "../pages/AboutUs";
 export { default as CartPage } from "../pages/CartPage";
@@ -86,11 +87,13 @@ export { default as CategoriesPage } from "../pages/CategoriesPage";
 export { default as CategoryPage } from "../pages/CategoryPage";
 export { default as Contact } from "../pages/Contact";
 export { default as Home } from "../pages/Home";
+export { default as LoginPage } from "../pages/LoginPage";
 export { default as Page404 } from "../pages/Page404";
 export { default as ProductsPage } from "../pages/ProductsPage";
 export { default as RootLayout } from "../pages/RootLayout";
 export { default as WishlistPage } from "../pages/WishlistPage";
 
+export { default as AboutInfo } from "../sections/AboutInfo";
 export { default as Banner } from "../sections/Banner";
 export { default as Categories } from "../sections/Categories";
 export { default as Clients } from "../sections/Clients";
@@ -102,5 +105,6 @@ export { default as Header } from "../sections/Header";
 export { default as Newsletter } from "../sections/Newsletter";
 export { default as PageBanner } from "../sections/PageBanner";
 export { default as Products } from "../sections/Products";
+export { default as RedBGQuote } from "../sections/Quote";
 export { default as StoreBanner } from "../sections/StoreBanner";
-
+export { default as Team } from "../sections/Team";

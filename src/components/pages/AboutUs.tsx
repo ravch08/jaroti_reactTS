@@ -1,14 +1,19 @@
 import React from "react";
-import { AboutInfo, Clients, Newsletter, RedBGQuote, Team } from "../utils/helper";
+import Quote from "../sections/Quote";
+import { AboutInfo, Clients, Newsletter, Team } from "../utils/helper";
 
 const AboutUs = () => {
 	return (
 		<React.Fragment>
 			<section className="about-banner">
-				<p>Jaroti was established in 1990. We are artisans who design, make and sell jewelry and gifts for love.</p>
+				<p>
+					Jaroti was established in 1990. We are artisans who design, make and sell jewelry and
+					gifts for love.
+				</p>
 			</section>
+
 			<AboutInfo />
-			<RedBGQuote />
+			<Quote />
 			<Team />
 			<Newsletter />
 			<Clients />

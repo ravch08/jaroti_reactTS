@@ -5,7 +5,7 @@ import {
 	createRoutesFromElements,
 } from "react-router-dom";
 // prettier-ignore
-import { AboutUs, CartPage, CategoriesPage, CategoryPage, Contact, Home, Page404, ProductsPage, RootLayout, WishlistPage } from "./components/utils/helper";
+import { AboutUs, CartPage, CategoriesPage, CategoryPage, Contact, Home, LoginPage, Page404, ProductsPage, RootLayout, WishlistPage } from "./components/utils/helper";
 
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,6 +22,7 @@ const router = createBrowserRouter(
 			<Route path="contact" element={<Contact />} />
 			<Route path="cart" element={<CartPage />} />
 			<Route path="wishlist" element={<WishlistPage />} />
+			<Route path="login" element={<LoginPage />} />
 			<Route path="*" element={<Page404 />} />
 		</Route>
 	)
