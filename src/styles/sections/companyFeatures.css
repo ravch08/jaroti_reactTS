@@ -1,0 +1,15 @@
+@import "../base/variables.css";
+
+.company-features {
+  padding: 2rem;
+
+  .feature-title {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--color-Dark-800);
+  }
+
+  svg {
+    fill: var(--color-light-800);
+  }
+}

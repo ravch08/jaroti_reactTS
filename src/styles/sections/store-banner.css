@@ -1,0 +1,21 @@
+.store-banner {
+  img {
+    width: 100%;
+  }
+  .main-banner {
+    flex-basis: 55%;
+  }
+
+  .storeBanner-content {
+    flex-basis: 40%;
+    text-align: center;
+    margin-right: 7.5%;
+
+    p {
+      padding: 1rem 0 3rem;
+    }
+    .btn-dark {
+      margin-bottom: 5rem;
+    }
+  }
+}

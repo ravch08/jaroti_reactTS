@@ -1,0 +1,33 @@
+@import "../base/variables.css";
+
+.btn {
+  cursor: pointer;
+  border-radius: 3rem;
+  padding: 1.6rem 4rem;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.btn-dark {
+  border: none;
+  color: white;
+  background-color: black;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+  &:hover {
+    color: black;
+    background-color: var(--color-light-400);
+  }
+}
+
+.btn-light {
+  border: none;
+  color: black;
+  background-color: white;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+}

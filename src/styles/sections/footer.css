@@ -1,0 +1,73 @@
+footer {
+  background-color: var(--color-footer);
+
+  .ftr-list {
+    flex-basis: 15%;
+  }
+  .ftr-logo {
+    flex-basis: 24%;
+
+    p {
+      padding: 2rem 0;
+      color: var(--color-light-100);
+    }
+  }
+
+  .ftr-head {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-size: var(--fs-h5);
+    color: var(--color-Dark-100);
+  }
+
+  .ftr-links {
+    padding: 1rem 0;
+    color: var(--color-light-100);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--color-light-800);
+    }
+  }
+
+  .footer-bar {
+    border-top: 0.1rem solid hsla(0, 0%, 100%, 0.247);
+
+    p {
+      color: var(--color-light-100);
+    }
+  }
+}
+
+.scrollToTop {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  display: flex;
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  transform: scale(0);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-Dark-100);
+  transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+
+  svg {
+    fill: white;
+  }
+
+  &.show {
+    transform: scale(1);
+  }
+
+  &:hover {
+    background-color: var(--color-secondary);
+  }
+}
+
+.clients {
+  padding: 6rem 0;
+  border-top: 0.1rem solid hsla(0, 0%, 0%, 0.075);
+}

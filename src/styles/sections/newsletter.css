@@ -1,0 +1,55 @@
+.newsletter {
+  background-color: var(--color-light-400);
+}
+
+.newsletter-wrapper {
+  text-align: center;
+
+  .form-error {
+    position: absolute;
+    top: 120%;
+    left: 28%;
+  }
+
+  form {
+    display: flex;
+    /* width: 100%; */
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+
+  label {
+    display: none;
+  }
+
+  input[type="email"] {
+    width: 60%;
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    padding: 1.8rem 1.5rem;
+    background-color: var(--color-light-100);
+  }
+
+  .btn-dark {
+    position: absolute;
+    right: 26.4%;
+    top: 8%;
+    padding: 1.4rem 4rem;
+  }
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+.form-error {
+  color: red;
+  text-align: left;
+}

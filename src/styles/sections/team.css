@@ -1,0 +1,32 @@
+.team-item {
+  text-align: center;
+
+  figure {
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border-radius: 0.8rem;
+  }
+
+  img {
+    transform: scale(1);
+    border-radius: 0.8rem;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  h3 {
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
+
+  span {
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-size: var(--fs-topbar);
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}

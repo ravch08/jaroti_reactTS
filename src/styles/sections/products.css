@@ -1,0 +1,153 @@
+.product-item {
+	flex-basis: 22%;
+
+	.product-img {
+		line-height: 0;
+		overflow: hidden;
+		position: relative;
+		border-radius: 0.8rem;
+	}
+
+	img {
+		transform: scale(1);
+		border-radius: 0.8rem;
+		transition: transform 0.5s ease-in-out;
+	}
+
+	.badge {
+		top: 3%;
+		color: var(--color-Dark-800);
+		background-color: var(--color-primary);
+	}
+
+	.discount {
+		top: 16%;
+		color: black;
+		background-color: white;
+	}
+
+	.btn-light {
+		position: absolute;
+		bottom: -22%;
+		left: 2.5%;
+		width: 95%;
+		padding: 2rem 4rem;
+		text-align: center;
+		font-size: var(--fs-topbar);
+		transition: bottom 0.5s ease-in-out;
+	}
+
+	.discount,
+	.badge {
+		left: 3%;
+		width: 5rem;
+		text-align: center;
+		position: absolute;
+		font-weight: 600;
+		padding: 1.2rem;
+		border-radius: 0.3rem;
+		font-size: var(--fs-topbar);
+	}
+
+	.product-content {
+		padding: 1.2rem 0.6rem;
+		background-color: white;
+
+		h3 {
+			font-weight: 400;
+			margin-bottom: 1rem;
+			letter-spacing: 0.1rem;
+			color: var(--color-Dark-800);
+			transition: color 0.5s ease-in-out;
+
+			&:hover {
+				color: var(--color-tertiary);
+			}
+		}
+
+		.price {
+			font-weight: 600;
+			font-size: var(--fs-topbar);
+			color: var(--color-Dark-800);
+		}
+
+		.priceCrossed {
+			font-weight: 600;
+			font-size: var(--fs-topbar);
+			text-decoration: line-through;
+			color: var(--color-secondary);
+		}
+	}
+
+	&:hover {
+		img {
+			transform: scale(1.1);
+		}
+
+		.btn-light {
+			bottom: 3%;
+		}
+
+		.user-cart {
+			right: 4%;
+		}
+	}
+}
+
+.category-tab {
+	color: black;
+	font-size: var(--fs-btn);
+	border-radius: 3rem;
+	padding: 1.2rem 3rem;
+	background-color: var(--color-primary);
+	transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+
+	&.active {
+		color: white;
+		background-color: black;
+	}
+
+	&:hover {
+		color: white;
+		background-color: black;
+	}
+}
+
+.user-cart {
+	top: 3%;
+	right: -14%;
+	position: absolute;
+	transition: right 0.5s ease-in-out;
+	.close,
+	.viewed,
+	.compare,
+	.wishlist {
+		width: 4rem;
+		height: 4rem;
+		border: none;
+		display: flex;
+		cursor: pointer;
+		margin-bottom: 0.8rem;
+		border-radius: 50%;
+		align-items: center;
+		justify-content: center;
+		background-color: white;
+		transition: background-color 0.5s ease-in-out;
+
+		svg {
+			fill: var(--color-Dark-800);
+		}
+
+		&:hover {
+			background-color: var(--color-primary);
+		}
+	}
+
+	.close {
+		background-color: black;
+
+		svg {
+			fill: white;
+		}
+	}
+}
