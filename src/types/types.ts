@@ -6,10 +6,11 @@ export type ProductProps = {
 	title: string;
 	badge: string;
 	price: number;
-	category: string;
+	category?: string;
 	discount?: number;
 	quantity?: number;
 	featured?: boolean;
+	inWishlist: boolean;
 	priceCrossed?: number;
 	addToCart: () => void;
 	addToWishlist: () => void;
@@ -35,7 +36,7 @@ export type SidebarHeaderProps = {
 };
 
 export type SidebarBodyProps = {
-	cart: ProductProps;
+	cart: ProductProps[];
 	add: () => void;
 	delete: () => void;
 	subtract: () => void;
@@ -44,4 +45,11 @@ export type SidebarBodyProps = {
 export type SidebarFooterProps = {
 	price: number;
 	closeSidebar: () => void;
+};
+
+export type InitialStateProps = {
+	cart: ProductProps[];
+	totalPrice: number;
+	items: ProductProps;
+	totalCartQuantity: number;
 };

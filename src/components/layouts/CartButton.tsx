@@ -10,13 +10,13 @@ import {
 	decrementQuantity,
 	deleteFromCart,
 	incrementQuantity,
-} from "../../app/reducers/wishCartSlice";
+} from "../../features/cart/cartSlice";
 
 const Cart = () => {
 	const [sidebar, setSidebar] = useState(false);
 
 	const dispatch = useDispatch();
-	const { cart, totalCartQuantity, totalPrice } = useSelector((state) => state.wishCartState);
+	const { cart, totalCartQuantity, totalPrice } = useSelector((state) => state.cart);
 
 	const openCartSidebar = () => setSidebar(true);
 	const closeCartSidebar = () => setSidebar(false);

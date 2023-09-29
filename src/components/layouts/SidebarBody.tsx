@@ -72,6 +72,7 @@ const SidebarBody = (props: SidebarBodyProps) => {
 											direction={"row"}
 											className="quantity"
 											alignItems={"center"}
+											justifyContent={"space-around"}
 											sx={{ fontSize: "1.5rem", mt: "1rem" }}
 										>
 											<p className="quantity-label">

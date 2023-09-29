@@ -1,13 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import wishCartReducer from "./reducers/wishCartSlice";
+import cartSlice from "../features/cart/cartSlice";
+import wishSlice from "../features/wishlist/wishSlice";
 
 const store = configureStore({
-  reducer: {
-    wishCartState: wishCartReducer
-  },
-  // middleware: (getDefaultMiddleware) => {
-  //   getDefaultMiddleware().concat(logger);
-  // }
+	reducer: {
+		cart: cartSlice,
+		wishlist: wishSlice,
+	},
 });
 
 export default store;

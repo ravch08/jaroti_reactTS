@@ -1,15 +1,17 @@
 import React from "react";
 
 import { Stack } from "@mui/material";
+
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart, deleteFromWishlist } from "../../app/reducers/wishCartSlice";
+import { addToCart } from "../../features/cart/cartSlice";
+import { deleteFromWishlist } from "../../features/wishlist/wishSlice";
 
 import { ProductProps } from "../../types/types";
 import { PageBanner, ProductItem, bannerProducts } from "../utils/helper";
 
 const WishlistPage = () => {
 	const dispatch = useDispatch();
-	const { wishlist } = useSelector((state) => state.wishCartState);
+	const { wishlist } = useSelector((state) => state.wishlist);
 
 	return (
 		<React.Fragment>

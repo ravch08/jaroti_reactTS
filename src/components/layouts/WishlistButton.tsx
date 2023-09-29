@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const WishlistButton = () => {
-	const { wishlist } = useSelector((state) => state.wishCartState);
+	const { wishlist } = useSelector((state) => state.wishlist);
 
 	return (
 		<Link to="wishlist" className="wishlist">

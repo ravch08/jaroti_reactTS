@@ -7,7 +7,9 @@ import { productItems } from "../utils/data";
 import { ProductItem } from "../utils/helper";
 
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart, addToWishlist, deleteFromWishlist } from "../../app/reducers/wishCartSlice";
+import { addToCart } from "../../features/cart/cartSlice";
+import { addToWishlist, deleteFromWishlist } from "../../features/wishlist/wishSlice";
+
 import { ProductProps } from "../../types/types";
 
 const Products = () => {
@@ -16,12 +18,10 @@ const Products = () => {
 	const [active, setActive] = useState(false);
 	const [category, setCategory] = useState("Necklace");
 
-	const { items } = useSelector((state) => state.wishCartState);
+	const { items } = useSelector((state) => state.cart);
 
 	const categoryAll = productItems?.map((item) => item.category);
 	const filteredCategories = ["All", ...new Set(categoryAll)];
-
-	// console.log(filteredCategories);
 
 	const clickHandler = (e) => {
 		const item = e.target.dataset.value;
@@ -76,11 +76,14 @@ const Products = () => {
 						return (
 							<ProductItem
 								key={item.id}
+								id={item.id}
 								badge={item.badge}
 								title={item.title}
 								price={item.price}
 								imgSrc={item.imgSrc}
 								discount={item.discount}
+								quantity={item.quantity}
+								inWishlist={item.inWishlist}
 								priceCrossed={item.priceCrossed}
 								addToCart={() => dispatch(addToCart(item))}
 								addToWishlist={() => dispatch(addToWishlist(item))}

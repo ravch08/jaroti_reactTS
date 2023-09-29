@@ -1,11 +1,14 @@
 import { Stack } from "@mui/material";
+
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart, addToWishlist, deleteFromWishlist } from "../../app/reducers/wishCartSlice";
+import { addToCart } from "../../features/cart/cartSlice";
+import { addToWishlist, deleteFromWishlist } from "../../features/wishlist/wishSlice";
+
 import { ProductItem } from "../utils/helper";
 
 const FeaturedProducts = () => {
 	const dispatch = useDispatch();
-	const { items } = useSelector((state) => state.wishCartState);
+	const { items } = useSelector((state) => state.cart);
 
 	return (
 		<section className="featured-products" aria-labelledby="Featured Products">
@@ -37,6 +40,7 @@ const FeaturedProducts = () => {
 									price={item.price}
 									imgSrc={item.imgSrc}
 									discount={item.discount}
+									inWishlist={item.inWishlist}
 									priceCrossed={item.priceCrossed}
 									addToCart={() => dispatch(addToCart(item))}
 									addToWishlist={() => dispatch(addToWishlist(item))}
