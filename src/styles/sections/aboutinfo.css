@@ -1,0 +1,51 @@
+.about-info {
+  figure {
+    overflow: hidden;
+    flex-basis: 45%;
+    border-radius: 0.8rem;
+  }
+
+  img {
+    transform: scale(1);
+    border-radius: 0.8rem;
+    transition: transform 0.5s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .about-content {
+    flex-basis: 50%;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.red-bg-quote {
+  color: var(--color-Dark-800);
+  background-color: var(--color-tertiary);
+
+  .container {
+    text-align: center;
+  }
+
+  span {
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+  }
+
+  p {
+    width: 68%;
+    margin: 0 auto;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 3rem;
+  }
+}

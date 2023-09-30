@@ -1,83 +1,123 @@
 @import "./variables.css";
 
 .container {
-  width: 90%;
-  height: 100%;
-  margin: 0 auto;
-  max-width: var(--width-container);
+	width: 85%;
+	height: 100%;
+	margin: 0 auto;
+	/* max-width: var(--width-container); */
 }
 
 section {
-  padding: var(--section-padding) 0;
+	padding: var(--section-padding) 0;
 }
 
 .pr-05 {
-  padding-right: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 .pr-2 {
-  padding-right: 2rem;
+	padding-right: 2rem;
 }
 
 .pl-05 {
-  padding-left: 0.5rem;
+	padding-left: 0.5rem;
 }
 
 .pl-2 {
-  padding-left: 2rem;
+	padding-left: 2rem;
 }
 
 .w-100 {
-  width: 100%;
+	width: 100%;
 }
 
 .text-center {
-  text-align: center;
+	text-align: center;
 }
 
 .d-flex {
-  display: flex;
+	display: flex;
 }
 
-.flexRow-start {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+.d-none {
+	display: none;
 }
 
-.flexRow-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.active {
+	font-weight: 600;
 }
 
-.flexRow-around {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.social-icons {
+	svg {
+		fill: var(--color-light-100);
+		transition: fill 0.3s ease-in-out;
+
+		&:hover {
+			fill: var(--color-secondary);
+		}
+	}
 }
 
-.flexRow-evenly {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+.about-banner {
+	height: 40vh;
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: center;
+	border-top: 0.1rem solid hsla(0, 0%, 0%, 0.082);
+	border-bottom: 0.1rem solid hsla(0, 0%, 0%, 0.082);
+
+	p {
+		width: 65%;
+		line-height: 1.5;
+		font-size: 4.4rem;
+		text-align: center;
+	}
 }
 
-.flexRow-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.page-banner {
+	padding: 0 0 4rem;
 
-.flexColumn-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+	.banner-item {
+		position: relative;
 
-.flexColumn-start {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+		.banner-content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			text-align: center;
+			transform: translate(-50%, -50%);
+
+			.superheading {
+				color: white;
+				animation-delay: 150ms;
+				animation-name: fadeInUp;
+				font-size: var(--fs-subheading);
+				text-transform: uppercase;
+				animation-duration: 2000ms;
+			}
+
+			h1 {
+				color: white;
+				font-weight: 400;
+				animation-delay: 150ms;
+				animation-name: fadeInUp;
+				animation-duration: 2000ms;
+			}
+
+			p {
+				color: white;
+				margin-bottom: 4rem;
+				animation-delay: 200ms;
+				animation-name: fadeInUp;
+				animation-duration: 2000ms;
+			}
+
+			.btn-light {
+				animation-delay: 250ms;
+				animation-name: fadeInUp;
+				animation-duration: 2000ms;
+			}
+		}
+	}
 }

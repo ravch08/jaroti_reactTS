@@ -1,3 +1,18 @@
 @import "./base/globals.css";
 @import "./base/utilities.css";
 @import "./base/animations.css";
+
+@import "./utils/buttons.css";
+
+@import "./sections/header.css";
+@import "./sections/banner.css";
+@import "./sections/companyFeatures.css";
+@import "./sections/categories.css";
+@import "./sections/products.css";
+@import "./sections/store-banner.css";
+@import "./sections/newsletter.css";
+@import "./sections/footer-banner.css";
+@import "./sections/footer.css";
+
+@import "./sections/aboutinfo.css";
+@import "./sections/team.css";

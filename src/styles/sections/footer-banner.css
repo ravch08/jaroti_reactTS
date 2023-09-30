@@ -1,0 +1,23 @@
+.footer-banner {
+  .banner-item {
+    height: 60vh;
+    background-image: url(../../assets/footer-banner-parallax.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .banner-content {
+    padding: 0 5rem;
+    text-align: center;
+    color: var(--color-light-100);
+    p {
+      padding: 2rem 0 3.5rem;
+    }
+
+    span {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
