@@ -10,6 +10,7 @@ import { AboutUs, CartPage, CategoriesPage, CategoryPage, Contact, Home, LoginPa
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCartTotal } from "./features/cart/cartSlice";
+import { InitialStateProps } from "./types/types";
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -30,7 +31,7 @@ const router = createBrowserRouter(
 
 function App() {
 	const dispatch = useDispatch();
-	const { cart } = useSelector((state) => state.cart);
+	const { cart } = useSelector((state: InitialStateProps) => state.cart);
 
 	useEffect(() => {
 		dispatch(getCartTotal());
